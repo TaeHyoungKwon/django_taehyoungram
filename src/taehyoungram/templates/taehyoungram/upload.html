@@ -1,0 +1,13 @@
+{% extends 'taehyoungram/base.html' %}
+
+{% block content %}
+
+<h1>taehyoungram Image Upload</h1>
+
+<form action="{% url 'taehyoungram:uploads' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+<input type="submit" value="Upload">
+</form>
+
+{% endblock %}
